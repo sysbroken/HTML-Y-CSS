@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: antiquewhite;
+    }
+    .c-padre{
+      /* background: red; */
+      height:100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .c-principal{
+      background: white;
+      border-radius: 10px;
+      width: 550px;
+      height: 400px;
+      display: flex;
+    }
+    .c-pri{
+      width: 50%;
+    }
+    .c-info{
+      padding: 20px;
+    }
+    img{
+      height: 100%;
+      border-radius: 10px 0px 0px 10px;
+    }
+    .price{
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+    .price2{
+      font-size: 34px;
+    }
+    .price3{
+      /* background: red; */
+      width: 50%;
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .price4{
+      text-decoration: line-through;
+    }
+    #perfume{
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 12px;
+      color: rgb(121, 121, 121);
+    }
+    #ttl-name{
+      font-size: 34px;
+      line-height: 30px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #txt-info{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #bttncart{
+      width: 95%;
+      padding: 10px;
+      border: none;
+      border-radius: 7px;
+      background: rgb(0, 48, 0);
+      color: white;
+      font-size: 16px;
+      transition: 1s;
+    }
+    #bttncart:hover{
+      background: rgb(0, 80, 0);
+    }
+    @media (max-width: 550px) {
+        .c-principal{
+        width: 400px;
+        height: 700px;
+        display: inline;
+      }
+      .c-pri{
+        width: 100%;
+      }
+      img{
+        height: 350px;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="c-padre">
+    <div class="c-principal">
+      <div class="c-image c-pri">
+        <img src="/images/image-product-desktop.jpg" alt="">
+      </div>
+      <div class="c-info c-pri">
+        <br>
+        <p id="perfume">P E R F U M E</p>
+        <br>
+        <p id="ttl-name"><strong>Gabrielle Essence Eau De Parfum</strong></p>
+        <br>
+        <p id="txt-info">A floral, solar and voluptuous interpretation composed by Oliver polge, Perfumer-Creator for the House of CHANEL.</p>
+        <br>
+        <div class="price">
+          <div class="price3 price2">
+            <p><strong>$149.99</strong></p>
+          </div>
+          <div class="price3 price4">
+            <p>$169.99</p>
+          </div>
+        </div>
+        <br>
+        <button id="bttncart"><i class="fa-brands fa-opencart"></i> Add to Cart</button>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Fiaksito</a>.
+    </div> -->
+  </div>
+  <script src="https://kit.fontawesome.com/d95b1659d8.js" crossorigin="anonymous"></script>
+</body>
+</html>
