@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background-image: url('img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.siderbar{
+    width: 115px;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    background: rgba(10,10,10,.65);
+    box-shadow: 0 8px 32px rgba(2,4,24);
+    border-right: 2px solid rgba(255,255,255, .09);
+    transition: .4s ease-in-out;
+}
+.siderbar.open{
+    width: 290px;
+}
+.siderbar .logo{
+    width: 100%;
+    height: 180px;
+    padding: 5px 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.siderbar .logo img{
+    width: 36px;
+    padding-top: 30px;
+    transition: .4s;
+}
+.siderbar.open .logo img{
+    padding-top: 0px;
+    width: 96px;
+}
+.siderbar .logo h3{
+    color: white;
+    font-size: 30px;
+    margin-top: 12px;
+    font-variant: small-caps;
+    pointer-events: none;
+    scale: 0;
+    opacity: 0;
+}
+.siderbar.open .logo h3{
+    scale: 1;
+    opacity: 1;
+    transition: .4s;
+    transition-delay: .2s;
+}
+.siderbar nav{
+    padding: 50px 30px;
+}
+.siderbar nav .nav-items{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    margin: 8px 0;
+    color: #fff;
+    transition: .3s;
+}
+.siderbar nav .nav-items.active{
+    background: #ffa600 !important;
+}
+.siderbar nav .nav-items:hover{
+    background: rgba(255,255,255, .1);
+}
+.siderbar nav .nav-items i{
+    font-size: 20px;
+}
+.siderbar nav .nav-items span{
+    font-size: 16px;
+    margin-left: 8px;
+    opacity: 0;
+    pointer-events: none;
+}
+.siderbar.open nav .nav-items span{
+    opacity: 1;
+    pointer-events: visible;
+    transform: .4s;
+    transition-delay: .2s;
+}
+.siderbar hr{
+    width: 100%;
+    height: 2px;
+    border-radius: 3px;
+    margin: 10px 0 10px;
+    background: rgba(255,255,255, .1);
+    opacity: 0;
+}
+.siderbar.open hr{
+    opacity: 1;
+    transition: .4s;
+}
+.siderbar .toggle{
+    cursor: pointer;
+    position: absolute;
+    color: #fff;
+    top: 180px;
+    right: -20px;
+    font-size: 38px;
+    line-height: 50%;
+    text-align: center;
+    border: 50%;
+    padding: 2px 0 2px 2px;
+    /* background: linear-gradient(90deg, transparent 50%, rgba(10,10,10,.65) 50%); */
+}
+.siderbar.open .toggle{
+    transform: translateY(45deg);
+}
+.siderbar.open .toggle{
+    transition: .4s linear;
+}
+.siderbar.open .toggle i{
+    transform: rotateY(180deg);
+}
+
+.home{
+    margin: 10px 30px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
+.home .card-price{
+    background: red;
+    padding: 10px;
+    margin: 10px;
+}
+.home .card-price .logo-price-basic{
+    width: 100%;
+    height: 20%;
+    font-size: 28px;
+    display: flex;
+}
