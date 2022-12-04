@@ -1,0 +1,6 @@
+format: '&7[&9TengoVidaSocial&7] &f{Player} &e{Message}'
+default_prefix: TengoVidaSocial
+default_suffix: Guest
+use_group_based_format: false
+alert_on_name_write: true
+debug: false
